@@ -8,8 +8,8 @@ else
 fi
 
 /bin/bash update.sh $serverDir
-screen -d -S $serverDir -m bash 7days.sh $serverDir
+screen -d -S $serverDir -m /bin/bash 7days.sh $serverDir
 
-sleep 2
+sleep 5
 
 /bin/bash status.sh $serverDir

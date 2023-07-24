@@ -7,6 +7,7 @@ else
     serverDir="$1"
 fi
 
+cat <(echo shutdown) <(sleep 0.1) <(echo exit) | nc -q 1 localhost 8081
 screen -S $serverDir -p 0 -X stuff "^c"
 
 echo "Attempting to wait for 7 Days to Die to stop"

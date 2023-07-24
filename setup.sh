@@ -50,11 +50,11 @@ read -n 1 -s -r -p "Press any key to continue"
 echo ""
 
 echo "Installing 7 Days To Die"
-./update.sh $serverDir
+/bin/bash update.sh $serverDir
 
 echo "Testing 7 Days To Die server by starting and waiting and then stopping it again. There should be no errors during this part."
 
-./start.sh $serverDir
+/bin/bash start.sh $serverDir
 
 echo "Sleeping for 60 seconds"
 
@@ -71,7 +71,7 @@ done
 
 echo ""
 
-./stop.sh $serverDir
+/bin/bash stop.sh $serverDir
 
 echo ""
 echo "This script will now check the firewall on this device."
